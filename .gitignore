@@ -1,0 +1,34 @@
+# Eclipse
+.classpath
+.project
+.settings/
+
+# Intellij
+.idea/
+*.iml
+*.iws
+
+# Mac
+.DS_Store
+
+# Maven
+log/
+target/
+
+# Gradle
+.gradle/
+build/
+
+# Vim
+*.swp
+
+.metals/
+
+.env.*
+
+/var
+
+bin/
+
+/doc.json
+/message.json

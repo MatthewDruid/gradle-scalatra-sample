@@ -1,0 +1,37 @@
+
+plugins {
+    id 'scala'
+    id 'war'
+
+    id "org.playframework.twirl" version "2.0.3"
+}
+
+repositories {
+    mavenCentral()
+}
+
+def jetty_version = '11.0.17'
+
+dependencies {
+    implementation 'org.scala-lang:scala3-library_3:3.3.1'
+
+    implementation 'org.scalatra:scalatra-jakarta_3:3.0.0'
+    testImplementation 'org.scalatra:scalatra-scalatest-jakarta_3:3.0.0'
+
+    implementation "org.playframework.twirl:twirl-api_3:2.0.3"
+
+    implementation "org.eclipse.jetty:jetty-webapp:${jetty_version}"
+    implementation "org.eclipse.jetty:jetty-servlets:${jetty_version}"
+
+    implementation 'jakarta.servlet:jakarta.servlet-api:5.0.0'
+}
+
+java {
+    sourceCompatibility = '17'
+    targetCompatibility = '17'
+}
+
+war {
+    webAppDirectory = file('src/main/webapp')
+}
+
